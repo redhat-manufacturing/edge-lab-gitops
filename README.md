@@ -57,3 +57,4 @@ The `sandbox` [namespace](components/namespaces/base/sandbox-namespace.yaml) is 
 
 ## Additional Docs
 - [ArgoCD - Repo Specific](docs/ARGOCD.md)
+- [How to add something to the cluster](docs/APPS.md) 
