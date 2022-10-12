@@ -2,7 +2,7 @@
 [![Spelling](https://github.com/redhat-manufacturing/osdu-lab-gitops/actions/workflows/spellcheck.yaml/badge.svg)](https://github.com/redhat-manufacturing/osdu-lab-gitops/actions/workflows/spellcheck.yaml)
 [![Linting](https://github.com/redhat-manufacturing/osdu-lab-gitops/actions/workflows/linting.yaml/badge.svg)](https://github.com/redhat-manufacturing/osdu-lab-gitops/actions/workflows/linting.yaml)
 
-This project is designed to bootstrap an OpenShift cluster using argoCD.
+This project is designed to bootstrap an OpenShift cluster using ArgoCD.
 
 ## Prerequisites
 
@@ -40,14 +40,14 @@ The `bootstrap.sh` script will:
 
 `bootstrap.sh` will attempt to deploy sealed-secrets and requires a sealed secret master key to manage existing deployments.  
 
-If managing an already bootstraped cluster, the sealed-secrets key must be obtained from the inital bootstrap (ask the person who initally setup the cluster).
+If managing an already bootstrapped cluster, the sealed-secrets key must be obtained from the initial bootstrap (ask the person who initially setup the cluster).
 
 The sealed secret(s) for bootstrap should be located at:
 ```sh
 bootstrap/base/sealed-secrets-secret.yaml
 ```
 
-If this is the first time bootstraping a cluster, `bootstrap.sh` will deploy a new sealed-secrets controller and obtain a new secret if it does not exist.
+If this is the first time bootstrapping a cluster, `bootstrap.sh` will deploy a new sealed-secrets controller and obtain a new secret if it does not exist.
 
 ## Additional Configurations
 
