@@ -1,0 +1,12 @@
+apiVersion: metal3.io/v1alpha1
+kind: BareMetalHost
+metadata:
+  name: se350-05
+  namespace: openshift-machine-api
+spec:
+  automatedCleaningMode: metadata
+  bmc:
+    address: redfish-virtualmedia://se350-06-xcc.lan/redfish/v1/Systems/1
+    credentialsName: se350-generic-bmc-secret
+    disableCertificateVerification: true
+  bootMACAddress: 00:00:00:00:00:00
