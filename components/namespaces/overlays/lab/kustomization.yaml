@@ -5,5 +5,7 @@ bases:
   - ../../base
 
 resources:
+  - archer-admin-rolebinding.yaml
+  - archer-namespace.yaml
   - hall-dev-admin-rolebinding.yaml
   - hall-dev-namespace.yaml
