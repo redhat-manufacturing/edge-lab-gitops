@@ -6,4 +6,5 @@ bases:
 
 resources:
   - app-pgadmin4.yaml
+  # see applicationset
   # - app-sandbox-cleanup.yaml
