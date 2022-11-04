@@ -4,6 +4,7 @@ kind: Kustomization
 bases:
   - ../../base
   - ../../../components/operators/openshift-gitops/instance/overlays/lab
+  - ../../../clusters/overlays/hou-edge
 
 resources:
   - argocd-ssh-known-hosts-cm.yaml
