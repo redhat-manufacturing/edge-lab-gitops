@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-odf-instance
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-storage
+    server: https://kubernetes.default.svc
+  project: cluster-config
+  source:
+    path: components/simple/odf
+    repoURL: git@github.com:redhat-manufacturing/osdu-lab-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      selfHeal: true
