@@ -3,7 +3,6 @@ kind: Kustomization
 
 bases:
   - ../../base
-  - ../../../components/argocd/applicationsets/overlays/default
   - ../../../components/argocd/apps/overlays/default
   # - ../../../tenants/intel-demos/argocd/applicationsets/overlays/default
   # - ../../../tenants/intel-demos/argocd/projects/overlays/default

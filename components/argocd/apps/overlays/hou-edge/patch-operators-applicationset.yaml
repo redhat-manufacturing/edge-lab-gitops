@@ -1,0 +1,28 @@
+- op: add
+  path: /spec/generators/0/list/elements
+  value:
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: strimzi-operator
+        path: components/operators/strimzi/operator/overlays/stable
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: cert-manager-operator
+        path: components/operators/cert-manager/operator/overlays/tech-preview
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: aap-operator
+        path: components/operators/ansible-automation-platform/operator/overlays/stable-2.2
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: odf-operator
+        path: components/operators/openshift-data-foundation/operator/overlays/stable-4.10
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: local-storage-operator
+        path: components/operators/local-storage/operator/overlays/stable

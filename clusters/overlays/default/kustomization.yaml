@@ -3,5 +3,4 @@ kind: Kustomization
 
 bases:
   - ../../base
-  - ../../../components/argocd/applicationsets/overlays/default
   - ../../../components/argocd/apps/overlays/default

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-config-manager
+  name: cluster-rbac
   namespace: openshift-gitops
   labels:
     gitops.ownedBy: cluster-config
@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: clusters/overlays/hou-edge
+    path: components/rbac/overlays/default
     repoURL: git@github.com:redhat-manufacturing/osdu-lab-gitops.git
     targetRevision: main
   syncPolicy:
