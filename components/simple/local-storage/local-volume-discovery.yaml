@@ -3,13 +3,4 @@ kind: LocalVolumeDiscovery
 metadata:
   name: auto-discover-devices
   namespace: openshift-local-storage
-spec:
-  nodeSelector:
-    nodeSelectorTerms:
-      - matchExpressions:
-          - key: kubernetes.io/hostname
-            operator: In
-            values:
-              - se350-01
-              - se350-02
-              - se350-03
+spec: {}
