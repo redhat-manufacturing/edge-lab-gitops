@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-local-storage
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-local-storage
+    server: https://kubernetes.default.svc
+  project: cluster-config
+  source:
+    path: components/simple/local-storage
+    repoURL: git@github.com:redhat-manufacturing/osdu-lab-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      selfHeal: true
