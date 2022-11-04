@@ -7,10 +7,12 @@ spec:
   nodeSelector:
     nodeSelectorTerms:
       - matchExpressions:
-          - key: cluster.ocs.openshift.io/openshift-storage
+          - key: kubernetes.io/hostname
             operator: In
             values:
-              - ''
+              - se350-01
+              - se350-02
+              - se350-03
   tolerations:
     - effect: NoSchedule
       key: node.ocs.openshift.io/storage
