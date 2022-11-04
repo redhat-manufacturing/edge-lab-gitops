@@ -1,7 +1,7 @@
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: local-disks
+  name: local-disks-block
   labels:
     local.storage.openshift.io/owner-name: local-disks-block
     local.storage.openshift.io/owner-namespace: openshift-local-storage
