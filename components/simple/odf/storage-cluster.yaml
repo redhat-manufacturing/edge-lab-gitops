@@ -8,7 +8,7 @@ metadata:
     uninstall.ocs.openshift.io/mode: graceful
   name: ocs-storagecluster
   namespace: openshift-storage
-pec:
+spec:
   storageDeviceSets:
     - count: 6
       dataPVCTemplate:
