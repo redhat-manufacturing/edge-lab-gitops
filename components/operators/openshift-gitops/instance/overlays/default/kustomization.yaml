@@ -7,7 +7,7 @@ bases:
   - ../../base
 
 resources:
-  - gitopsadmin-group.yaml
+  - gitops-admin-group.yaml
 
 patches:
   - path: patch-resource-customizations.yaml

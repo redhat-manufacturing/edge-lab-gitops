@@ -7,4 +7,4 @@ bases:
 
 resources:
   - argocd-ssh-known-hosts-cm.yaml
-  - repo-cluster-config-sealed.yaml
+  - argocd-ssh-repo-ss.yaml

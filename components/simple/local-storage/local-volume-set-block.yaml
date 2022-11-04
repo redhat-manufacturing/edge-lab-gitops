@@ -16,7 +16,7 @@ spec:
   storageClassName: local-disks-block
   volumeMode: Block
   deviceInclusionSpec:
-    deviceTypes: 
+    deviceTypes:
       - disk
       # - part
     minSize: 100G

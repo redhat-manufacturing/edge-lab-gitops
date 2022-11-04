@@ -104,7 +104,7 @@ eventing
 generatorOptions
 github
 gitops
-gitopsadmins
+gitops-admins
 gmail
 gp
 grafana
