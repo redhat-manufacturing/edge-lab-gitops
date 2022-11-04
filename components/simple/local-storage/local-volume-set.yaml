@@ -14,7 +14,7 @@ spec:
               - se350-02
               - se350-03
   storageClassName: local-disks-block
-  volumeMode: block
+  volumeMode: Block
   deviceInclusionSpec:
     deviceTypes: 
       - disk
