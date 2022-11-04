@@ -5,6 +5,7 @@ bases:
   - ../../base
 
 resources:
+  - app-local-storage.yaml
   - app-pgadmin4.yaml
   # see applicationset
   # - app-sandbox-cleanup.yaml
