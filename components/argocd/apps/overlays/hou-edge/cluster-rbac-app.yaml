@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: components/rbac/overlays/default
+    path: components/rbac/overlays/hou-edge
     repoURL: git@github.com:redhat-manufacturing/osdu-lab-gitops.git
     targetRevision: main
   syncPolicy:
