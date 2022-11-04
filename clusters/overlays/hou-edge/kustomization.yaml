@@ -7,3 +7,26 @@ bases:
 
   # - ../../../tenants/intel-demos/argocd/projects/overlays/default
   # - ../../../tenants/intel-demos/argocd/apps/overlays/default
+
+patches:
+  - path: patch-applicationset-repo-revision.yaml
+    target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: ApplicationSet
+  - path: patch-application-repo-revision.yaml
+    target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: Application
+  # Uncomment patches to disable automatic sync
+  # - path: patch-applicationset-manual-sync.yaml
+  #   target:
+  #     group: argoproj.io
+  #     version: v1alpha1
+  #     kind: ApplicationSet
+  # - path: patch-application-manual-sync.yaml
+  #   target:
+  #     group: argoproj.io
+  #     version: v1alpha1
+  #     kind: Application
