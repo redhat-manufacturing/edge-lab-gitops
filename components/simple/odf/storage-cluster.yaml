@@ -8,30 +8,22 @@ metadata:
     uninstall.ocs.openshift.io/mode: graceful
   name: ocs-storagecluster
   namespace: openshift-storage
-spec:
-  encryption:
-    enable: true
-    kms: {}
-  flexibleScaling: true
-  managedResources:
-    cephBlockPools: {}
-    cephConfig: {}
-    cephDashboard: {}
-    cephFilesystems: {}
-    cephObjectStoreUsers: {}
-    cephObjectStores: {}
-  monDataDirHostPath: /var/lib/rook
-  nodeTopologies: {}
+pec:
   storageDeviceSets:
-  - count: 1
-    dataPVCTemplate:
-      spec:
-        accessModes:
-        - ReadWriteOnce
-        resources:
-          requests:
-            storage: "1"
-        storageClassName: local-disks-block
-        volumeMode: Block
-    name: ocs-deviceset-local
-    replica: 3
+    - count: 6
+      dataPVCTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: '1'
+          storageClassName: local-disks-block
+          volumeMode: Block
+      name: ocs-deviceset-local-disks-block
+      replica: 1
+  encryption:
+    clusterWide: true
+    enable: true
+  monDataDirHostPath: /var/lib/rook
+  flexibleScaling: true

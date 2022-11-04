@@ -6,7 +6,7 @@ bases:
 
 resources:
   - app-local-storage.yaml
-  # - app-odf-instance.yaml
+  - app-odf-instance.yaml
   - app-pgadmin4.yaml
   # see applicationset
   # - app-sandbox-cleanup.yaml
