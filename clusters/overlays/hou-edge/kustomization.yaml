@@ -4,6 +4,6 @@ kind: Kustomization
 bases:
   - ../../base
   - ../../../components/argocd/apps/overlays/hou-edge
-  # - ../../../tenants/intel-demos/argocd/applicationsets/overlays/default
+
   # - ../../../tenants/intel-demos/argocd/projects/overlays/default
   # - ../../../tenants/intel-demos/argocd/apps/overlays/default
