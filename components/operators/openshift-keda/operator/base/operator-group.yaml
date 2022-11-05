@@ -3,6 +3,3 @@ kind: OperatorGroup
 metadata:
   name: openshift-keda-group
   namespace: openshift-keda
-spec:
-  targetNamespaces:
-    - openshift-keda
