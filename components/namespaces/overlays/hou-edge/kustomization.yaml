@@ -7,5 +7,7 @@ bases:
 resources:
   - archer-admin-rolebinding.yaml
   - archer-namespace.yaml
+  - chaosmonkey-admin-rolebinding.yaml
+  - chaosmonkey-namespace.yaml
   - hall-dev-admin-rolebinding.yaml
   - hall-dev-namespace.yaml
