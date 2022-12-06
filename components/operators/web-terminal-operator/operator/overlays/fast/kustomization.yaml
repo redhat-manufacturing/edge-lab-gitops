@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: openshift-operators
 
 bases:
-   https://github.com/redhat-cop/gitops-catalog/web-terminal-operator/operator/overlays/fast
+  https://github.com/redhat-cop/gitops-catalog/web-terminal-operator/operator/overlays/fast?ref=main
