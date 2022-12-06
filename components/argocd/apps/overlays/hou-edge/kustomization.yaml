@@ -8,7 +8,7 @@ resources:
   - app-local-storage.yaml
   - app-odf-instance.yaml
   - app-pgadmin4.yaml
-  - cluster-rbac-app.yaml
+  # - cluster-rbac-app.yaml
 
 patches:
   - target:
