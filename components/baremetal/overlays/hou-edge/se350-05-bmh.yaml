@@ -10,3 +10,4 @@ spec:
     credentialsName: se350-generic-bmc-secret
     disableCertificateVerification: true
   bootMACAddress: 00:00:00:00:00:00
+  online: true
