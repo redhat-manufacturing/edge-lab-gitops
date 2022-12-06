@@ -1,0 +1,9 @@
+- op: add
+  path: /spec/generators/0/list/elements
+  value:
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: simple-sandbox-cleanup
+        namespace: openshift-gitops
+        path: components/simple/sandbox-cleanup

@@ -24,5 +24,11 @@ patches:
       group: argoproj.io
       version: v1alpha1
       kind: ApplicationSet
+      name: cluster-configs-applicationset
+    path: patch-configs-applicationset.yaml
+  - target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: ApplicationSet
       name: cluster-operators-applicationset
     path: patch-operators-applicationset.yaml
