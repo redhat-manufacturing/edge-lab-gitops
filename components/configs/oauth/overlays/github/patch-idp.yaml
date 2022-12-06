@@ -1,0 +1,14 @@
+- op: add
+  path: /spec/identityProviders
+  value:
+    - github:
+        clientID: 3a1b9fd2ada5936b5a75
+        clientSecret:
+          name: github-client-secret
+        hostname: ''
+        organizations: []
+        teams:
+          - redhat-manufacturing/osdu-lab
+      mappingMethod: claim
+      name: GitHub
+      type: GitHub
