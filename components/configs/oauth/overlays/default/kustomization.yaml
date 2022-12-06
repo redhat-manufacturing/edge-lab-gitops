@@ -6,16 +6,4 @@ commonAnnotations:
   argocd.argoproj.io/sync-options: Prune=false
 
 bases:
-- ../baseß
-
-resources:
-- client-sealed-secret.yaml
-
-# Patch cluster specific
-patchesJson6902:
-  - path: patch-idp.yaml
-    target:
-      group: config.openshift.io
-      kind: OAuth
-      name: cluster
-      version: v1
+- ../base
