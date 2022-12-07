@@ -159,6 +159,7 @@ rhods
 rhpds
 runtime
 sandboxed
+sealedsecrets
 seldon
 selectable
 serverless
