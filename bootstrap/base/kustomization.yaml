@@ -4,6 +4,6 @@ kind: Kustomization
 bases:
   - ../../components/operators/sealed-secrets/operator/overlays/default
 
-resources:
-  - sealed-secrets-namespace.yaml 
-  # - sealed-secrets-secret.yaml
+# resources:
+#   - sealed-secrets-namespace.yaml 
+#   - sealed-secrets-secret.yaml
