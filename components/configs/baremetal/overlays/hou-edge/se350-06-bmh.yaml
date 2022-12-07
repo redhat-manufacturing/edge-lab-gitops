@@ -7,7 +7,7 @@ spec:
   automatedCleaningMode: metadata
   bmc:
     address: redfish-virtualmedia://se350-06-xcc.lan/redfish/v1/Systems/1
-    credentialsName: se350-generic-bmc-secret
+    credentialsName: se350-06-bmc-secret
     disableCertificateVerification: true
-  bootMACAddress: 00:00:00:00:00:00
+  bootMACAddress: 00:00:00:00:00:06
   online: true
