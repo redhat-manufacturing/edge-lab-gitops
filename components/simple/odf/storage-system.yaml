@@ -1,3 +1,5 @@
+# this instance will not progress before you label nodes
+# oc label node cluster.ocs.openshift.io/openshift-storage="" --all
 apiVersion: odf.openshift.io/v1alpha1
 kind: StorageSystem
 metadata:
