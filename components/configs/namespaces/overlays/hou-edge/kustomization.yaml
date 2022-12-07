@@ -5,6 +5,8 @@ bases:
   - ../../base
 
 resources:
+  - adrezni-admin-rolebinding.yaml
+  - adrezni-namespace.yaml
   - archer-admin-rolebinding.yaml
   - archer-namespace.yaml
   - chaosmonkey-admin-rolebinding.yaml
