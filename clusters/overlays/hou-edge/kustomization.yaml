@@ -3,6 +3,7 @@ kind: Kustomization
 
 bases:
   - ../../base
+  - ./cluster-certs
   - ../../../components/argocd/apps/overlays/hou-edge
 
   # - ../../../tenants/intel-demos/argocd/projects/overlays/default
