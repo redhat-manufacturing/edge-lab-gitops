@@ -17,3 +17,10 @@ oc patch configs.imageregistry.operator.openshift.io/cluster --type=merge -p '{"
 oc patch configs.imageregistry.operator.openshift.io cluster --type merge -p '{"spec":{"managementState":"Managed"}}'
 oc patch configs.imageregistry.operator.openshift.io cluster --type merge -p '{"spec":{"storage":{"pvc":{"claim": null}}}}'
 ```
+
+Expose image registry
+```
+oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
+
+HOST=$(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')
+```
