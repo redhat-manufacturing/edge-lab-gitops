@@ -39,7 +39,7 @@ patches:
       #   value: Z03493643DMUOB4JH32Q0
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/region
-        value: us-east-1
+        value: us-east-2
     target:
       kind: ClusterIssuer
       name: letsencrypt-prod
@@ -59,7 +59,7 @@ patches:
       #   value: Z03493643DMUOB4JH32Q0
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/region
-        value: us-east-1
+        value: us-east-2
     target:
       kind: ClusterIssuer
       name: letsencrypt-staging
