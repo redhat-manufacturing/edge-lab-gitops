@@ -3,6 +3,7 @@ kind: Kustomization
 
 bases:
   - ../../base
+  - ../../../components/operators/openshift-gitops/instance/overlays/hou-edge
   - ../../../clusters/overlays/hou-edge
 
 resources:

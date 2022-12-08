@@ -23,8 +23,8 @@ patches:
           g, lab-cluster-admins, role:admin
           g, system:cluster-admins, role:admin
           g, cluster-admins, role:admin
-      - op: add
-        path: /spec/server/route/tls/termination
-        value: edge
+      # - op: add
+      #   path: /spec/server/route/tls/termination
+      #   value: edge
     target:
       kind: ArgoCD
