@@ -3,7 +3,7 @@ kind: Kustomization
 
 bases:
   - ../../base
-  - ../../../components/operators/openshift-gitops/instance/overlays/hou-edge
+  # - ../../../components/operators/openshift-gitops/instance/overlays/hou-edge
   - ../../../components/argocd/apps/overlays/hou-edge
 
   # - ../../../tenants/intel-demos/argocd/projects/overlays/default
