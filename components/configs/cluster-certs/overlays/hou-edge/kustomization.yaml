@@ -10,6 +10,9 @@ patches:
         path: /spec/dnsNames
         value:
           - api.hou.edgelab.online
+      - op: replace
+        path: /spec/issuerRef/name
+        value: letsencrypt-prod
     target:
       kind: Certificate
       name: openshift-api
@@ -21,6 +24,9 @@ patches:
       - op: replace
         path: /spec/commonName
         value: '*.apps.hou.edgelab.online'
+      - op: replace
+        path: /spec/issuerRef/name
+        value: letsencrypt-prod
     target:
       kind: Certificate
       name: openshift-wildcard
