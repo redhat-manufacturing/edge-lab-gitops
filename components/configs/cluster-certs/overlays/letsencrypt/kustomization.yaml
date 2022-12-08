@@ -34,9 +34,9 @@ patches:
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/accessKeyID
         value: AKIAQJKWXV7MNZQUCH4P
-      # - op: replace
-      #   path: /spec/acme/solvers/0/dns01/route53/hostedZoneID
-      #   value: Z03493643DMUOB4JH32Q0
+      - op: replace
+        path: /spec/acme/solvers/0/dns01/route53/hostedZoneID
+        value: Z03493643DMUOB4JH32Q0
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/region
         value: us-east-2
@@ -54,9 +54,9 @@ patches:
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/accessKeyID
         value: AKIAQJKWXV7MNZQUCH4P
-      # - op: replace
-      #   path: /spec/acme/solvers/0/dns01/route53/hostedZoneID
-      #   value: Z03493643DMUOB4JH32Q0
+      - op: replace
+        path: /spec/acme/solvers/0/dns01/route53/hostedZoneID
+        value: Z03493643DMUOB4JH32Q0
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/region
         value: us-east-2
