@@ -5,5 +5,5 @@ bases:
   - ../../components/operators/sealed-secrets/operator/overlays/default
 
 # resources:
-#   - sealed-secrets-namespace.yaml 
+#   - sealed-secrets-namespace.yaml
 #   - sealed-secrets-secret.yaml
