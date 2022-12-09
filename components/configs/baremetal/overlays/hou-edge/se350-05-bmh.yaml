@@ -9,5 +9,5 @@ spec:
     address: redfish-virtualmedia://se350-05-xcc.lan/redfish/v1/Systems/1
     credentialsName: se350-05-bmc-secret
     disableCertificateVerification: true
-  bootMACAddress: 00:00:00:00:00:05
+  bootMACAddress: 08:3a:88:1e:0c:a6
   online: true
