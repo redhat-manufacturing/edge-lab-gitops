@@ -9,6 +9,8 @@ resources:
   - adrezni-namespace.yaml
   - archer-admin-rolebinding.yaml
   - archer-namespace.yaml
+  - bkoz-admin-rolebinding.yaml
+  - bkoz-namespace.yaml
   - chaosmonkey-admin-rolebinding.yaml
   - chaosmonkey-namespace.yaml
   - hall-dev-admin-rolebinding.yaml
