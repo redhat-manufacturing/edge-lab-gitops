@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: components/simple/local-storage
+    path: components/configs/simple/local-storage
     repoURL: git@github.com:redhat-manufacturing/osdu-lab-gitops.git
     targetRevision: main
   syncPolicy:

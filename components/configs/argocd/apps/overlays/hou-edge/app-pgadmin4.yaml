@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: components/simple/pgadmin4
+    path: components/configs/simple/pgadmin4
     repoURL: git@github.com:redhat-manufacturing/osdu-lab-gitops.git
     targetRevision: main
   syncPolicy:

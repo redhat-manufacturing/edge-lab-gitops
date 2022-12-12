@@ -36,4 +36,4 @@
       values:
         name: config-sandbox-cleanup
         namespace: openshift-gitops
-        path: components/simple/sandbox-cleanup
+        path: components/configs/simple/sandbox-cleanup
