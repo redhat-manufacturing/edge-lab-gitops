@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: openshift-gitops
 
 bases:
-  - ../../components/argocd/projects/overlays/default
+  - ../../components/configs/argocd/projects/overlays/default
