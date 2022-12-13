@@ -14,6 +14,11 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
+        name: operator-grafana
+        path: components/operators/grafana-operator/operator/overlays/v4
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
         name: operator-local-storage
         path: components/operators/local-storage/operator/overlays/stable
     - cluster: local
