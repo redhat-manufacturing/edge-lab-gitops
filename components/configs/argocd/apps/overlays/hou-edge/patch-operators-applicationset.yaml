@@ -4,6 +4,11 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
+        name: operator-amq-streams
+        path: components/operators/amq-streams/operator/overlays/stable
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
         name: operator-aap
         path: components/operators/ansible-automation-platform/operator/overlays/stable-2.2
     - cluster: local
