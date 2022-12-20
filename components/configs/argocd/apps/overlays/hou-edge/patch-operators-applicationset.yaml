@@ -19,6 +19,11 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
+        name: crunchy-postgres-operator
+        path: components/operators/crunchy-postgres/operator/overlays/v5
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
         name: operator-elasticsearch
         path: components/operators/elasticsearch/operator/overlays/stable
     - cluster: local
