@@ -24,7 +24,7 @@
       values:
         name: config-oauth
         namespace: openshift-gitops
-        path: components/configs/oauth/overlays/github
+        path: components/configs/oauth/overlays/hou-edge
     - cluster: local
       url: https://kubernetes.default.svc
       values:

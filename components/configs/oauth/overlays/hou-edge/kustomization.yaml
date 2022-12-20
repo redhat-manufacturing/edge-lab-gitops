@@ -9,10 +9,11 @@ bases:
 - ../../base
 
 resources:
-- client-sealed-secret.yaml
+- github-client-sealed-secret.yaml
+- gitlab-client-sealed-secret.yaml
 
 # Patch cluster specific
-patchesJson6902:
+patches:
   - path: patch-idp.yaml
     target:
       group: config.openshift.io
