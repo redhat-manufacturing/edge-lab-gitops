@@ -5,4 +5,4 @@ namespace: openshift-gitops
 
 bases:
   - ../../base
-  - ../../components/operators/openshift-gitops/instance/overlays/hou-edge
+  - ../../../instance/overlays/hou-edge
