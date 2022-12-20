@@ -13,10 +13,10 @@
       name: GitHub
       type: GitHub
     - name: community.opengroup.org
-      mappingMethod: claim 
+      mappingMethod: claim
       type: GitLab
       gitlab:
         clientID: bf881f4d354b73f1bcf0abfde1887ad743e4c61447d512f1c595019990d5a082
-        clientSecret: 
+        clientSecret:
           name: community-gitlab-secret
-        url: https://community.opengroup.org 
+        url: https://community.opengroup.org
