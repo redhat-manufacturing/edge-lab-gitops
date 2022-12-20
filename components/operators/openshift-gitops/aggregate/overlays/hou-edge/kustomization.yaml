@@ -3,4 +3,4 @@ kind: Kustomization
 
 bases:
   - ../../base
-  # - ../../../instance/overlays/hou-edge
+  - ../../../instance/overlays/hou-edge
