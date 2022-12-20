@@ -12,3 +12,11 @@
       mappingMethod: claim
       name: GitHub
       type: GitHub
+    - name: GitLab
+      mappingMethod: claim 
+      type: GitLab
+      gitlab:
+        clientID: {...} 
+        clientSecret: 
+          name: gitlab-secret
+        url: https://gitlab.com 
