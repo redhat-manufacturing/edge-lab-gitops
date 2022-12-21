@@ -1,0 +1,10 @@
+gitops-tenant:
+  fullnameOverride: adrezni
+
+  adminGroup:
+    members:
+      - adrezni
+
+  namespaces:
+    - nameSuffix: dev
+      role: dev

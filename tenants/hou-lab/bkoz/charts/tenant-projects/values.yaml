@@ -1,0 +1,10 @@
+gitops-tenant:
+  fullnameOverride: bkoz
+
+  adminGroup:
+    members:
+      - bkoz
+
+  namespaces:
+    - nameSuffix: dev
+      role: dev

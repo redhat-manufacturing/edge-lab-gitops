@@ -1,0 +1,10 @@
+gitops-tenant:
+  fullnameOverride: chaosmonkey
+
+  adminGroup:
+    members:
+      - codekow
+
+  namespaces:
+    - nameSuffix: dev
+      role: dev
