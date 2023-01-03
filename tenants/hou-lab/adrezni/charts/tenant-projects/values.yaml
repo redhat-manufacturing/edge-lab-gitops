@@ -4,6 +4,7 @@ gitops-tenant:
   adminGroup:
     members:
       - adrezni
+      - codekow
 
   namespaces:
     - nameSuffix: ""
