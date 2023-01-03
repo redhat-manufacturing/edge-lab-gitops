@@ -1,11 +1,11 @@
 gitops-tenant:
-  fullnameOverride: bkoz
+  fullnameOverride: hall
 
   adminGroup:
     members:
-      - bkoz
+      - thomasphall
 
   namespaces:
-    - nameSuffix: dev
+    - nameSuffix: "dev"
       role: dev
       adminGroupRole: admin

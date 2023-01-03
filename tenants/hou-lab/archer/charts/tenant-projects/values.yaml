@@ -6,5 +6,6 @@ gitops-tenant:
       - jarcher
 
   namespaces:
-    - nameSuffix: dev
+    - nameSuffix: ""
       role: dev
+      adminGroupRole: admin

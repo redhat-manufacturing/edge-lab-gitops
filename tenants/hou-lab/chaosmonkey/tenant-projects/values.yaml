@@ -6,5 +6,6 @@ gitops-tenant:
       - codekow
 
   namespaces:
-    - nameSuffix: dev
+    - nameSuffix: ""
       role: dev
+      adminGroupRole: admin

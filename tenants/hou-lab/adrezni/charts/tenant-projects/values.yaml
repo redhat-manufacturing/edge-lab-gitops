@@ -6,5 +6,6 @@ gitops-tenant:
       - adrezni
 
   namespaces:
-    - nameSuffix: dev
+    - nameSuffix: ""
       role: dev
+      adminGroupRole: admin

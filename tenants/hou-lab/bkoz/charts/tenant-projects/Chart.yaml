@@ -8,5 +8,5 @@ version: 0.1.0
 
 dependencies:
   - name: "gitops-tenant"
-    version: "0.3.7"
+    version: "0.3.8"
     repository: "https://rh-intelligent-application-practice.github.io/helm-charts/"
