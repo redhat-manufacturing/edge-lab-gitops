@@ -8,6 +8,7 @@ resources:
   - app-local-storage.yaml
   - app-odf-instance.yaml
   - app-pgadmin4.yaml
+  - applicationset-tenants.yaml
   # - cluster-rbac-app.yaml
 
 patches:
