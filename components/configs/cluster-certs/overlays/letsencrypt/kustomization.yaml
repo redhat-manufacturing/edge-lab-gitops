@@ -33,10 +33,10 @@ patches:
           name: letsencrypt-issuer-account-key
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/accessKeyID
-        value: AKIAQJKWXV7MNZQUCH4P
+        value: AKIAXFKCL5ZQBZBZKDN5
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/hostedZoneID
-        value: Z03493643DMUOB4JH32Q0
+        value: Z059930635P9N4KE4N8LR
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/region
         value: us-east-2
@@ -53,10 +53,10 @@ patches:
           name: letsencrypt-issuer-account-key
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/accessKeyID
-        value: AKIAQJKWXV7MNZQUCH4P
+        value: AKIAXFKCL5ZQBZBZKDN5
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/hostedZoneID
-        value: Z03493643DMUOB4JH32Q0
+        value: Z059930635P9N4KE4N8LR
       - op: replace
         path: /spec/acme/solvers/0/dns01/route53/region
         value: us-east-2
