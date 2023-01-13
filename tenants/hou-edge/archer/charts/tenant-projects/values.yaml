@@ -1,0 +1,11 @@
+gitops-tenant:
+  fullnameOverride: archer
+
+  adminGroup:
+    members:
+      - jarcher
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: admin

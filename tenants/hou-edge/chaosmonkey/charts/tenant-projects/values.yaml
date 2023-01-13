@@ -1,0 +1,13 @@
+gitops-tenant:
+  fullnameOverride: chaosmonkey
+
+  adminGroup:
+    members:
+      - codekow
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: admin
+      annotations:
+        openshift.io/display-name: Make Chaos Great Again

@@ -1,0 +1,11 @@
+gitops-tenant:
+  fullnameOverride: hall
+
+  adminGroup:
+    members:
+      - thomasphall
+
+  namespaces:
+    - nameSuffix: "dev"
+      role: dev
+      adminGroupRole: admin
