@@ -6,6 +6,6 @@ gitops-tenant:
       - bkoz
 
   namespaces:
-    - nameSuffix: dev
+    - nameSuffix: ""
       role: dev
       adminGroupRole: admin
