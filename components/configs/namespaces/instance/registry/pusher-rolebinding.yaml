@@ -7,6 +7,5 @@ roleRef:
   kind: ClusterRole
   name: system:image-pusher
 subjects:
-- apiGroup: rbac.authorization.k8s.io
-  kind: ServiceAccount
-  name: pusher
+  - kind: ServiceAccount
+    name: pusher

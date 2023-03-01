@@ -7,6 +7,5 @@ roleRef:
   kind: ClusterRole
   name: system:image-puller
 subjects:
-- apiGroup: rbac.authorization.k8s.io
-  kind: ServiceAccount
+- kind: ServiceAccount
   name: puller
