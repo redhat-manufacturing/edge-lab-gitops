@@ -5,5 +5,7 @@ namespace: registry
 
 resources:
   - namespace.yaml
+  - puller-rolebinding.yaml
   - puller-sa.yaml
+  - pusher-rolebinding.yaml
   - pusher-sa.yaml
