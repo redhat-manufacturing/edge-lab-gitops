@@ -5,4 +5,4 @@ namespace: openshift-gitops
 
 bases:
   - ../../base
-  - ../../../components/operators/openshift-gitops/instance/overlays/default
+  - ../../../components/operators/openshift-gitops-operator/instance/overlays/default

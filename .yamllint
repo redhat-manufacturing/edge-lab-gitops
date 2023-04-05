@@ -14,5 +14,5 @@ rules:
     ignore: .github/workflows/
   trailing-spaces:
     ignore: |
-      components/operators/openshift-gitops/instance/overlays/lab/patch-resource-customizations.yaml
-      components/operators/openshift-gitops/instance/overlays/default/patch-resource-customizations.yaml
+      components/operators/openshift-gitops-operator/instance/overlays/lab/patch-resource-customizations.yaml
+      components/operators/openshift-gitops-operator/instance/overlays/default/patch-resource-customizations.yaml
