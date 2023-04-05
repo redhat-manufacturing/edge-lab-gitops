@@ -1,6 +1,6 @@
 # Bitnami Sealed Secrets
 
-**Version: 0.17.3**
+**Version: 0.19.1**
 
 ## Project Reference
 
@@ -11,6 +11,7 @@ GitHub: [Bitnami Labs - Sealed Secrets](https://github.com/bitnami-labs/sealed-s
 No `namespace` is provided in this repository, so you are free to choose whatever namespace you like.  For example, in your own repository, you might have the following `namespace.yaml` and `kustomization.yaml` to deploy the Sealed Secrets operator into a `sealed-secrets` namespace.
 
 **namespace.yaml**
+
 ```
 kind: Namespace
 apiVersion: v1
@@ -19,6 +20,7 @@ metadata:
 ```
 
 **kustomization.yaml**
+
 ```
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
