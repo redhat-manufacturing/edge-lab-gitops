@@ -98,7 +98,7 @@ spec:
     route:
       enabled: true
       tls:
-        termination: reencrypt
+        termination: passthrough
     service:
       type: ""
   sso:
