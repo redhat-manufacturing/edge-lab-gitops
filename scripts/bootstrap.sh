@@ -12,7 +12,8 @@ install_gitops(){
   echo ""
   echo "Installing GitOps Operator."
 
-  kustomize build components/operators/openshift-gitops/operator/overlays/latest | oc apply -f -
+  # kustomize build components/operators/openshift-gitops-operator/operator/overlays/latest | oc apply -f -
+  oc apply -k components/operators/openshift-gitops-operator/operator/overlays/latest
 
   echo "Pause ${SLEEP_SECONDS} seconds for the creation of the gitops-operator..."
   sleep ${SLEEP_SECONDS}
@@ -60,7 +61,8 @@ bootstrap_cluster(){
 
   echo "Selected: ${bootstrap_dir}"
   echo "Apply overlay to override default instance"
-  kustomize build "${bootstrap_dir}" | oc apply -f -
+  # kustomize build "${bootstrap_dir}" | oc apply -f -
+  oc apply -k "${bootstrap_dir}"
 
   sleep 10
   echo "Waiting for all pods to redeploy"
@@ -79,14 +81,20 @@ bootstrap_cluster(){
   echo "https://${route}"
 }
 
+kludges(){
+  [ -e "scripts/kludges.sh" ] && scripts/kludges.sh
+}
+
 # functions
 setup_bin
 check_bin oc
-check_bin kustomize
-#check_bin kubeseal
+# check_bin kustomize
+# check_bin kubeseal
 check_oc_login
 
 # bootstrap
 check_sealed_secret
 install_gitops
 bootstrap_cluster
+
+# kludges
