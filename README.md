@@ -1,6 +1,6 @@
 # Cluster Bootstrap
-[![Spelling](https://github.com/redhat-manufacturing/osdu-lab-gitops/actions/workflows/spellcheck.yaml/badge.svg)](https://github.com/redhat-manufacturing/osdu-lab-gitops/actions/workflows/spellcheck.yaml)
-[![Linting](https://github.com/redhat-manufacturing/osdu-lab-gitops/actions/workflows/linting.yaml/badge.svg)](https://github.com/redhat-manufacturing/osdu-lab-gitops/actions/workflows/linting.yaml)
+[![Spelling](https://github.com/redhat-manufacturing/edge-lab-gitops/actions/workflows/spellcheck.yaml/badge.svg)](https://github.com/redhat-manufacturing/edge-lab-gitops/actions/workflows/spellcheck.yaml)
+[![Linting](https://github.com/redhat-manufacturing/edge-lab-gitops/actions/workflows/linting.yaml/badge.svg)](https://github.com/redhat-manufacturing/edge-lab-gitops/actions/workflows/linting.yaml)
 
 This project is designed to bootstrap an OpenShift cluster using ArgoCD.
 

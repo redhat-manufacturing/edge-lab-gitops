@@ -8,7 +8,7 @@
         hostname: ''
         organizations: []
         teams:
-          - redhat-manufacturing/osdu-lab
+          - redhat-manufacturing/edge-lab
       mappingMethod: claim
       name: GitHub
       type: GitHub

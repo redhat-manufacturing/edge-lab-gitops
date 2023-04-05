@@ -10,7 +10,7 @@ spec:
   project: cluster-config
   source:
     path: components/configs/simple/odf
-    repoURL: git@github.com:redhat-manufacturing/osdu-lab-gitops.git
+    repoURL: git@github.com:redhat-manufacturing/edge-lab-gitops.git
     targetRevision: main
   syncPolicy:
     automated:
