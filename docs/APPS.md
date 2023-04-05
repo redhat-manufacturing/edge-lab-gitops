@@ -5,6 +5,7 @@
 Convert an existing secret into a sealed-secret that can be committed in git
 
 Dump current sealed secret cert
+
 ```
 SEALED_SECRETS_SECRET=bootstrap/base/sealed-secrets-secret.yaml
 
@@ -17,11 +18,13 @@ oc -n sealed-secrets -o yaml \
 Convert a secret local file to a sealed-secret
 
 ```
-cat scratch/repo-secret.yml | kubeseal \
+cat scratch/repo-secret.yaml | kubeseal \
   --controller-namespace sealed-secrets \
-  -o yaml > bootstrap/overlays/default/argocd-ssh-repo-ss.yaml
+  -o yaml > bootstrap/overlays/hou-edge/argocd-ssh-repo-ss.yaml
 ```
+
 Convert a secret in OpenShift to a sealed-secret
+
 ```
 oc -n openshift-config \
   -o yaml \
@@ -31,7 +34,6 @@ oc -n openshift-config \
       --controller-namespace sealed-secrets
 ```
   
-
 Add the following annotations to the sealed secret
 
 ```
