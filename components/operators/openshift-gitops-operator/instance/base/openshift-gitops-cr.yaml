@@ -44,14 +44,14 @@ spec:
         cpu: 250m
         memory: 128Mi
   initialSSHKnownHosts: {}
-  notifications:
-    enabled: false
-  prometheus:
-    enabled: false
-    ingress:
-      enabled: false
-    route:
-      enabled: false
+  # notifications:
+  #   enabled: false
+  # prometheus:
+  #   enabled: false
+  #   ingress:
+  #     enabled: false
+  #   route:
+  #     enabled: false
   rbac:
     policy: |
       g, system:cluster-admins, role:admin
