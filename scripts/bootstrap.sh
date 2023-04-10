@@ -5,40 +5,32 @@ set -e
 source "$(dirname "$0")/functions.sh"
 
 LANG=C
-SLEEP_SECONDS=45
+SLEEP_SECONDS=25
 ARGO_NS="openshift-gitops"
+ARGO_CHANNEL="stable"
+ARGO_DEPLOY_STABLE=(cluster kam openshift-gitops-applicationset-controller openshift-gitops-redis openshift-gitops-repo-server openshift-gitops-server)
 
-install_gitops(){
-  echo ""
-  echo "Installing GitOps Operator."
-
-  # kustomize build components/operators/openshift-gitops-operator-operator/operator/overlays/latest | oc apply -f -
-  oc apply -k components/operators/openshift-gitops-operator-operator/operator/overlays/latest
-
-  echo "Pause ${SLEEP_SECONDS} seconds for the creation of the gitops-operator..."
-  sleep ${SLEEP_SECONDS}
-
+wait_for_gitops(){
   echo "Waiting for operator to start"
   until oc get deployment gitops-operator-controller-manager -n openshift-operators
   do
-    sleep 5
+    sleep 1
   done
 
   echo "Waiting for openshift-gitops namespace to be created"
   until oc get ns ${ARGO_NS}
   do
-    sleep 5
+    sleep 1
   done
 
   echo "Waiting for deployments to start"
   until oc get deployment cluster -n ${ARGO_NS}
   do
-    sleep 5
+    sleep 1
   done
 
   echo "Waiting for all pods to be created"
-  deployments=(cluster kam openshift-gitops-applicationset-controller openshift-gitops-redis openshift-gitops-repo-server openshift-gitops-server)
-  for i in "${deployments[@]}"
+  for i in "${ARGO_DEPLOY_STABLE[@]}"
   do
     echo "Waiting for deployment $i"
     oc rollout status deployment "$i" -n ${ARGO_NS}
@@ -46,6 +38,19 @@ install_gitops(){
 
   echo ""
   echo "OpenShift GitOps successfully installed."
+}
+
+install_gitops(){
+  echo ""
+  echo "Installing GitOps Operator."
+
+  # kustomize build components/operators/openshift-gitops-operator/operator/overlays/stable | oc apply -f -
+  oc apply -k "components/operators/openshift-gitops-operator/operator/overlays/${ARGO_CHANNEL}"
+
+  echo "Pause ${SLEEP_SECONDS} seconds for the creation of the gitops-operator..."
+  sleep ${SLEEP_SECONDS}
+
+  wait_for_gitops
 
 }
 
@@ -64,15 +69,8 @@ bootstrap_cluster(){
   # kustomize build "${bootstrap_dir}" | oc apply -f -
   oc apply -k "${bootstrap_dir}"
 
-  sleep 10
-  echo "Waiting for all pods to redeploy"
-  deployments=(cluster kam openshift-gitops-applicationset-controller openshift-gitops-redis openshift-gitops-repo-server openshift-gitops-server)
-  for i in "${deployments[@]}"
-  do
-    echo "Waiting for deployment $i"
-    oc rollout status deployment "$i" -n ${ARGO_NS}
-  done
-
+  wait_for_gitops
+  
   echo
   echo "GitOps has successfully deployed!  Check the status of the sync here:"
 
