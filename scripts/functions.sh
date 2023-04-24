@@ -11,10 +11,18 @@ echo "PWD:  $(pwd)"
 echo "PATH: ${PATH}"
 }
 
+# get functions
+get_functions(){
+  echo -e "functions:\n"
+  sed -n '/(){/ s/(){$//p' "$(dirname $0)/$(basename $0)"
+}
+
 usage(){
-echo "
-You can run individual functions!
-"
+  echo "
+  usage: source scripts/funtions.sh
+  "
+
+  get_functions
 }
 
 is_sourced() {
@@ -51,6 +59,14 @@ check_oc(){
 
   echo "UUID: ${UUID}"
   sleep 4
+}
+
+# check login
+check_oc_login(){
+  oc cluster-info | head -n1
+  oc whoami || exit 1
+  echo
+  sleep 3
 }
 
 setup_bin(){
@@ -104,6 +120,10 @@ null_finalizers(){
   oc patch "${OBJ}" \
     --type=merge \
     -p '{"metadata":{"finalizers":null}}'
+
+  # oc patch "${OBJ}" \
+  #   --type="json" \
+  #   -p '[{"op": "remove", "path":"/metadata/finalizers"}]'
 }
 
 download_helm(){
@@ -157,16 +177,7 @@ download_restic(){
   chmod 755 ${BIN_PATH}/restic
 }
 
-
-# check login
-check_oc_login(){
-  oc cluster-info | head -n1
-  oc whoami || exit 1
-  echo
-  sleep 3
-}
-
-create_sealed_secret(){
+sealed_secret_create(){
   read -r -p "Create NEW [${SEALED_SECRETS_SECRET}]? [y/N] " input
   case $input in
     [yY][eE][sS]|[yY])
@@ -204,13 +215,13 @@ create_sealed_secret(){
       echo
       echo 'You must choose yes or no to continue'
       echo      
-      create_sealed_secret
+      sealed_secret_create
       ;;
   esac
 }
 
 # Validate sealed secrets secret exists
-check_sealed_secret(){
+sealed_secret_check(){
   if [ -f ${SEALED_SECRETS_SECRET} ]; then
     echo "Exists: ${SEALED_SECRETS_SECRET}"
     oc apply -f ${SEALED_SECRETS_FOLDER}/namespace.yaml
@@ -220,11 +231,11 @@ check_sealed_secret(){
     echo "Missing: ${SEALED_SECRETS_SECRET}"
     echo "The master key is required to bootstrap sealed secrets and CANNOT be checked into git."
     echo
-    create_sealed_secret
+    sealed_secret_create
   fi
 }
 
-get_aws_key(){
+aws_get_key(){
   # get aws creds
   AWS_ACCESS_KEY_ID=$(oc -n kube-system extract secret/aws-creds --keys=aws_access_key_id --to=-)
   AWS_SECRET_ACCESS_KEY=$(oc -n kube-system extract secret/aws-creds --keys=aws_secret_access_key --to=-)
@@ -233,6 +244,8 @@ get_aws_key(){
   export AWS_ACCESS_KEY_ID
   export AWS_SECRET_ACCESS_KEY
   export AWS_DEFAULT_REGION
+
+  echo "AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}"
 }
 
 aws_stop_all_ec2(){
@@ -254,3 +267,54 @@ aws_start_ocp4_cluster(){
     "${CLUSTER_IDS}" \
     --output text >/dev/null
 }
+
+aws_create_gpu_machineset(){
+  MACHINE_SET=$(oc -n openshift-machine-api get machinesets.machine.openshift.io -o name | grep worker | head -n1)
+  INSTANCE_TYPE=${1:-g4dn.12xlarge}
+
+  oc -n openshift-machine-api get "${MACHINE_SET}" -o yaml | \
+    sed '/machine/ s/-worker/-gpu/g
+      /name/ s/-worker/-gpu/g
+      s/instanceType.*/instanceType: '"${INSTANCE_TYPE}"'/
+      s/replicas.*/replicas: 0/' | \
+    oc apply -f -
+}
+
+ocp_control_as_workers(){
+  oc patch schedulers.config.openshift.io/cluster --type merge --patch '{"spec":{"mastersSchedulable": true}}'
+}
+
+# save money in aws
+ocp_save_money(){
+  # run work on masters
+  ocp_control_as_workers
+
+  # scale down workers
+  oc -n openshift-machine-api \
+    get machineset \
+    -o name | grep worker | \
+      xargs \
+        oc -n openshift-machine-api \
+        scale --replicas=1
+}
+
+ocp_expose_image_registry(){
+  oc patch configs.imageregistry.operator.openshift.io/cluster --type=merge --patch '{"spec":{"defaultRoute":true}}'
+
+  # remove 'default-route-openshift-image-' from route
+  HOST=$(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')
+  SHORTER_HOST=$(echo "${HOST}" | sed '/host/ s/default-route-openshift-image-//')
+  oc patch configs.imageregistry.operator.openshift.io/cluster --type=merge --patch '{"spec":{"host": "'"${SHORTER_HOST}"'"}}'
+
+  echo "OCP image registry is available at: ${SHORTER_HOST}"
+}
+
+ocp_remove_kubeadmin(){
+  oc get secret kubeadmin -n kube-system -o yaml > scratch/kubeadmin.yaml
+  oc delete secret kubeadmin -n kube-system
+}
+
+# get functions
+# sed -n '/(){/ s/(){$//p' scripts/kludges.sh
+
+is_sourced || usage
