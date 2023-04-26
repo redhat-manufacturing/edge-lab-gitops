@@ -5,7 +5,7 @@ metadata:
 spec:
   href: 'https://github.com/redhat-manufacturing/edge-lab-gitops'
   location: ApplicationMenu
-  text: GitHub - Cluster GitOps
+  text: Cluster GitOps
   applicationMenu:
     section: Tools
     imageURL: https://img.icons8.com/fluency/512/github.png
