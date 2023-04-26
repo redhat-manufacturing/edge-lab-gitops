@@ -1,6 +1,7 @@
 ACM
 ACS
 APIs
+Adhoc
 Ansible
 ArgoCD
 Bitnami
@@ -136,6 +137,7 @@ kafka
 kataconfig
 kiali
 knative
+kubeadmin
 kubernetes
 kustomization
 kustomize

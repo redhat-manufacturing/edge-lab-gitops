@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sleeper-admin
+  name: sleeper-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sleeper-admin
+  template:
+    metadata:
+      labels:
+        app: sleeper-admin
+    spec:
+      containers:
+      - command:
+        - sh
+        - -c
+        - |
+          #!/bin/sh
+          echo "Where we are going we don't need kubeadmin!"
+
+          sleep infinity
+
+        image: image-registry.openshift-image-registry.svc:5000/openshift/tools:latest
+        name: tools
+        resources:
+          limits:
+            cpu: 400m
+            memory: 32Mi
+      serviceAccount: cluster-admin-adhoc-helper
+      serviceAccountName: cluster-admin-adhoc-helper
