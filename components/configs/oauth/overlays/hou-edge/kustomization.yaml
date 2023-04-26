@@ -6,11 +6,13 @@ commonAnnotations:
   argocd.argoproj.io/sync-options: Prune=false
 
 bases:
-- ../../base
+  - ../../base
 
 resources:
-- github-client-sealed-secret.yaml
-- gitlab-client-sealed-secret.yaml
+  - chevron-client-sealed-secret.yaml
+  - github-client-sealed-secret.yaml
+  - gitlab-client-sealed-secret.yaml
+
 
 # Patch cluster specific
 patches:
