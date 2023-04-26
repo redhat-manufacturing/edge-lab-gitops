@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+  - banner-warning.yaml
+  - link-gitops.yaml
+
+patches:
+  - target:
+      kind: ConsoleNotification
+      name: banner-top
+    patch: |-
+      - op: replace
+        path: /spec/text
+        value: 'Welcome to the Houston Edge Lab'
