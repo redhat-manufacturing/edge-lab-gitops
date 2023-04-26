@@ -35,10 +35,13 @@
         name:
           - name
         preferredUsername:
+          - email
           - preferred_username
       clientID: de5bbbac-f86c-4fba-bab8-33061d315d1a
       clientSecret:
         name: chevron-oidc-client-secret
-      extraScopes: []
+      extraScopes:
+        - email
+        - profile
       issuer: https://login.microsoftonline.com/fd799da1-bfc1-4234-a91c-72b3a1cb9e26/v2.0
       # callback: https://oauth-openshift.apps.hou.edgelab.online/oauth2callback/Chevron
