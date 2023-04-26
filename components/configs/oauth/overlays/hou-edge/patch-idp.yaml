@@ -41,3 +41,4 @@
         name: azure-oidc-client-secret
       extraScopes: []
       issuer: https://login.microsoftonline.com/fd799da1-bfc1-4234-a91c-72b3a1cb9e26/v2.0
+      # callback: https://oauth-openshift.apps.hou.edgelab.online/oauth2callback/Chevron
