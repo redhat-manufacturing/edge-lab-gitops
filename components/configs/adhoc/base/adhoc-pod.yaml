@@ -9,8 +9,6 @@ spec:
   updateStrategy:
     type: Recreate
   serviceName: sleeper-admin
-  serviceAccount: cluster-admin-adhoc-helper
-  serviceAccountName: cluster-admin-adhoc-helper
   selector:
     matchLabels:
       app.kubernetes.io/name: sleeper-admin
@@ -19,6 +17,8 @@ spec:
       labels:
         app.kubernetes.io/name: sleeper-admin
     spec:
+      serviceAccount: cluster-admin-adhoc-helper
+      serviceAccountName: cluster-admin-adhoc-helper
       containers:
         - command:
           - sh
