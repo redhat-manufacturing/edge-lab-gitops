@@ -7,7 +7,5 @@ roleRef:
   kind: Role
   name: adhoc-terminal
 subjects:
-  # - kind: Group
-  #   name: lab-cluster-readers
-  - kind: User
-    name: codekow
+  - kind: Group
+    name: adhoc-ops

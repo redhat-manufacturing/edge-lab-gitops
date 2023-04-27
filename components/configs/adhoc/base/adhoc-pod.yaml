@@ -26,6 +26,8 @@ spec:
           - |
             #!/bin/sh
             echo "Where we are going we don't need kubeadmin!"
+            echo ""
+            echo "You have found the hidden chamber! Now what?"
 
             sleep infinity
 
