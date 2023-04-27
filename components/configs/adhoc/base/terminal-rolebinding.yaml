@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: adhoc-terminal
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: adhoc-terminal
+subjects:
+  # - kind: Group
+  #   name: lab-cluster-readers
+  - kind: User
+    name: codekow

@@ -7,3 +7,5 @@ resources:
   - adhoc-pod.yaml
   - admin-rolebinding.yaml
   - namespace.yaml
+  - terminal-role.yaml
+  - terminal-rolebinding.yaml
