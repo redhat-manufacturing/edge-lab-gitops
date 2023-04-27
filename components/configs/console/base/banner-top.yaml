@@ -8,4 +8,4 @@ spec:
   location: BannerTop
   # https://htmlcolorcodes.com/color-picker
   color: '#fff'
-  backgroundColor: '#ff9900'
+  backgroundColor: '#0088ce'
