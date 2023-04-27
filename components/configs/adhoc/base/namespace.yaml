@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ocp-adhoc
+  name: adhoc-admin
   annotations:
     openshift.io/description: |
       Let automation do something for you -
