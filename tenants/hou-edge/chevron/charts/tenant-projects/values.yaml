@@ -1,0 +1,12 @@
+gitops-tenant:
+  fullnameOverride: chevron
+
+  adminGroup:
+    members:
+      - nathanchurch@chevron.com
+      - zachary.day@chevron.com
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: admin
