@@ -37,6 +37,12 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
+              name: tenant-projects-chevron
+              namespace: openshift-gitops
+              path: tenants/hou-edge/chevron/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
               name: tenant-projects-hall
               namespace: openshift-gitops
               path: tenants/hou-edge/hall/charts/tenant-projects
