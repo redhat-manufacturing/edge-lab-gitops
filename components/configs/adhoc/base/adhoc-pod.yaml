@@ -29,7 +29,7 @@ spec:
             echo ""
             echo "You have found the hidden chamber! Now what?"
 
-            sleep 60
+            sleep 600
             oc -n adhoc-admin \
               delete pod sleeper-admin-0 \
               --wait=false
