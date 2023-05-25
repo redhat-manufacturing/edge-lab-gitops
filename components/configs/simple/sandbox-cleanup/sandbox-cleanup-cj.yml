@@ -23,7 +23,7 @@ spec:
               - bash
               - -c
               - |
-                # set cpu limit
+                # delete objects
                 oc -n sandbox \
-                  --wait false \
-                  delete ${OBJECTS} --all
+                  delete ${OBJECTS} --all \
+                  --wait false
