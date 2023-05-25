@@ -19,6 +19,7 @@ spec:
     spec:
       serviceAccount: cluster-admin-adhoc-helper
       serviceAccountName: cluster-admin-adhoc-helper
+      automountServiceAccountToken: false
       containers:
         - command:
           - sh
@@ -29,11 +30,20 @@ spec:
             echo ""
             echo "You have found the hidden chamber! Now what?"
 
-            sleep infinity
-
+            sleep 600
           image: image-registry.openshift-image-registry.svc:5000/openshift/tools:latest
           name: tools
           resources:
             limits:
               cpu: 400m
-              memory: 32Mi
+              memory: 64Mi
+          volumeMounts:
+            - mountPath: /kubernetes.io/serviceaccount/token
+              name: sa-token
+      volumes:
+        - name: sa-token
+          projected:
+            sources:
+              - serviceAccountToken:
+                  path: sa-token
+                  expirationSeconds: 1200
