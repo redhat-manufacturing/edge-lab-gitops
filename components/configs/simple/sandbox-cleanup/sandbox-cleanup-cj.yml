@@ -18,11 +18,12 @@ spec:
             image: image-registry.openshift-image-registry.svc:5000/openshift/cli
             env:
               - name: OBJECTS
-                value: all,cm,secrets,pvc
+                value: all,cm,secrets,pvc,devworkspace,pipeline
             command:
               - bash
               - -c
               - |
                 # set cpu limit
                 oc -n sandbox \
+                  --wait false \
                   delete ${OBJECTS} --all
