@@ -19,7 +19,6 @@ spec:
     spec:
       serviceAccount: cluster-admin-adhoc-helper
       serviceAccountName: cluster-admin-adhoc-helper
-      automountServiceAccountToken: false
       containers:
         - command:
           - sh
@@ -36,14 +35,15 @@ spec:
           resources:
             limits:
               cpu: 400m
-              memory: 64Mi
-          volumeMounts:
-            - mountPath: /run/kubernetes.io/serviceaccount
-              name: sa-token
-      volumes:
-        - name: sa-token
-          projected:
-            sources:
-              - serviceAccountToken:
-                  path: token
-                  expirationSeconds: 1200
+              memory: 32Mi
+      #     volumeMounts:
+      #       - mountPath: /run/kubernetes.io/serviceaccount
+      #         name: sa-token
+      # volumes:
+      #   - name: sa-token
+      #     projected:
+      #       sources:
+      #         - serviceAccountToken:
+      #             path: token
+      #             expirationSeconds: 1200
+      # automountServiceAccountToken: false
