@@ -38,12 +38,12 @@ spec:
               cpu: 400m
               memory: 64Mi
           volumeMounts:
-            - mountPath: /run/kubernetes.io/serviceaccount/token
+            - mountPath: /run/kubernetes.io/serviceaccount
               name: sa-token
       volumes:
         - name: sa-token
           projected:
             sources:
               - serviceAccountToken:
-                  path: sa-token
+                  path: token
                   expirationSeconds: 1200
