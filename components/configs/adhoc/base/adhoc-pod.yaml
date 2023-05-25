@@ -29,7 +29,10 @@ spec:
             echo ""
             echo "You have found the hidden chamber! Now what?"
 
-            sleep 600
+            sleep 60
+            oc -n adhoc-admin \
+              delete pod sleeper-admin-0 \
+              --wait=false
           image: image-registry.openshift-image-registry.svc:5000/openshift/tools:latest
           name: tools
           resources:
