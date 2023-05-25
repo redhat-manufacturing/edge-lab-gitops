@@ -38,7 +38,7 @@ spec:
           resources:
             limits:
               cpu: 400m
-              memory: 32Mi
+              memory: 64Mi
       #     volumeMounts:
       #       - mountPath: /run/kubernetes.io/serviceaccount
       #         name: sa-token
