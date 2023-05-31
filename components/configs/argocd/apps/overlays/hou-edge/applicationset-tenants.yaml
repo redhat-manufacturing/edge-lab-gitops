@@ -25,6 +25,12 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
+              name: tenant-projects-backstage
+              namespace: openshift-gitops
+              path: tenants/hou-edge/backstage/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
               name: tenant-projects-bkoz
               namespace: openshift-gitops
               path: tenants/hou-edge/bkoz/charts/tenant-projects
