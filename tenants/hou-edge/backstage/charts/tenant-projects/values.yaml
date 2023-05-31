@@ -1,0 +1,12 @@
+gitops-tenant:
+  fullnameOverride: backstage
+
+  adminGroup:
+    members:
+      - anseifert
+      - codekow
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: edit
