@@ -40,7 +40,7 @@
       url: https://kubernetes.default.svc
       values:
         name: operator-odf
-        path: components/operators/openshift-data-foundation/operator/overlays/stable-4.10
+        path: components/operators/openshift-data-foundation/operator/overlays/stable-4.12
     - cluster: local
       url: https://kubernetes.default.svc
       values:
