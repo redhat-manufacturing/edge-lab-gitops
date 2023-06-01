@@ -1,5 +1,5 @@
 gitops-tenant:
-  fullnameOverride: chaosmonkey
+  fullnameOverride: codekow
 
   adminGroup:
     members:

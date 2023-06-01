@@ -4,7 +4,7 @@ Label storage nodes to deploy odf
 
 ```
 oc label node cluster.ocs.openshift.io/openshift-storage="" --all
-
+# oc label nodes --selector='node-role.kubernetes.io/worker' cluster.ocs.openshift.io/openshift-storage="" --overwrite=true
 
 oc annotate sc ocs-storagecluster-cephfs storageclass.kubernetes.io/is-default-class="true"
 ```
