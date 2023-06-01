@@ -1,5 +1,5 @@
 gitops-tenant:
-  fullnameOverride: hall
+  fullnameOverride: thomasphall
 
   adminGroup:
     members:
