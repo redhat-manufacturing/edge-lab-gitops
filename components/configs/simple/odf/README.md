@@ -1,13 +1,16 @@
 # Post Bootstrap Notes
 
 Label storage nodes to deploy odf
+
 ```
 oc label node cluster.ocs.openshift.io/openshift-storage="" --all
+
 
 oc annotate sc ocs-storagecluster-cephfs storageclass.kubernetes.io/is-default-class="true"
 ```
 
 Setup image registry
+
 ```
 # check storage class
 oc get sc
@@ -19,6 +22,7 @@ oc patch configs.imageregistry.operator.openshift.io cluster --type merge -p '{"
 ```
 
 Expose image registry
+
 ```
 oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
 
