@@ -37,9 +37,9 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
-              name: tenant-projects-chaosmonkey
+              name: tenant-projects-codekow
               namespace: openshift-gitops
-              path: tenants/hou-edge/chaosmonkey/charts/tenant-projects
+              path: tenants/hou-edge/codekow/charts/tenant-projects
           - cluster: local
             url: https://kubernetes.default.svc
             values:
