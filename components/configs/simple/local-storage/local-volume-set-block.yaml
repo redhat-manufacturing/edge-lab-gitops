@@ -10,9 +10,9 @@ spec:
           - key: kubernetes.io/hostname
             operator: In
             values:
-              - se350-04
-              - se350-05
-              - se350-06
+              - se350-04.edge.lab
+              - se350-05.edge.lab
+              - se350-06.edge.lab
   storageClassName: local-disks-block
   volumeMode: Block
   deviceInclusionSpec:
