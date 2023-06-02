@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: LimitRange
 metadata:
-  name: sandbox-limit-range
-  namespace: sandbox
+  name: limit-range
+  namespace: template
 spec:
   limits:
     - type: Container
