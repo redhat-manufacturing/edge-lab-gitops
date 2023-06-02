@@ -1,7 +1,7 @@
 apiVersion: metal3.io/v1alpha1
 kind: BareMetalHost
 metadata:
-  name: se350-03
+  name: se350-03.edge.lab
   namespace: openshift-machine-api
 spec:
   automatedCleaningMode: metadata
