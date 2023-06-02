@@ -4,7 +4,7 @@ metadata:
   name: kubevirt-hyperconverged
   namespace: openshift-cnv
 spec:
-  channel: "stable"
+  channel: patch-me-see-overlays-dir
   installPlanApproval: Automatic
   name: kubevirt-hyperconverged
   source: redhat-operators
