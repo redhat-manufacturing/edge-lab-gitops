@@ -36,6 +36,8 @@ The `bootstrap.sh` script will:
 - Create an ArgoCD instance in the `openshift-gitops` namespace
 - Bootstrap a set of ArgoCD applications to configure the cluster
 
+See [post bootstrap tasks](components/configs/simple/odf/README.md)
+
 ### Sealed Secrets Bootstrap
 
 `bootstrap.sh` will attempt to deploy sealed-secrets and requires a sealed secret master key to manage existing deployments.  
