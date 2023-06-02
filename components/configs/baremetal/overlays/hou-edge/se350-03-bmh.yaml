@@ -6,7 +6,7 @@ metadata:
 spec:
   automatedCleaningMode: metadata
   bmc:
-    address: redfish-virtualmedia://se350-03-xcc.lan/redfish/v1/Systems/1
+    address: redfish-virtualmedia://se350-03-xcc.edge.lab/redfish/v1/Systems/1
     credentialsName: se350-03-bmc-secret
     disableCertificateVerification: true
   bootMACAddress: 08:3a:88:1e:0e:dd
