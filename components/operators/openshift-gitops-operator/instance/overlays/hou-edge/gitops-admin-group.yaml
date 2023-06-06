@@ -4,5 +4,4 @@ metadata:
   name: gitops-admins
 users:
   - codekow
-  - opentlc-mgr
   - strangiato
