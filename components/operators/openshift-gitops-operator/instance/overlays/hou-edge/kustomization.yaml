@@ -6,15 +6,10 @@ namespace: openshift-gitops
 bases:
   - ../default
 
+patchesStrategicMerge:
+  - gitops-admin-group.yaml
+
 patches:
-  - patch: |-
-      - op: add
-        path: /users
-        value:
-          - codekow
-    target:
-      kind: Group
-      name: gitops-admins
   - patch: |-
       - op: replace
         path: /spec/rbac/policy
