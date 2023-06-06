@@ -74,5 +74,10 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
+        name: operator-rhods
+        path: components/operators/rhods-operator/operator/overlays/stable
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
         name: operator-web-terminal
         path: components/operators/web-terminal-operator/operator/overlays/fast
