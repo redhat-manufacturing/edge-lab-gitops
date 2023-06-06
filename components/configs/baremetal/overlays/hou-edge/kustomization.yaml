@@ -8,4 +8,4 @@ resources:
   - se350-04-bmh.yaml
   - se350-05-bmh.yaml
   - se350-06-bmh.yaml
-  - se350-generic-bmc-secret.yaml
+  - se350-generic-bmc-sealed-secret.yaml
