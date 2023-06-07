@@ -76,6 +76,7 @@ Tekton
 Thanos
 UI
 Workspaces
+adhoc
 amq
 api
 apiVersion
@@ -200,4 +201,5 @@ truly
 useable
 vSphere
 vsphere
+whoami
 yaml
