@@ -49,6 +49,12 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
+              name: tenant-projects-gsisa
+              namespace: openshift-gitops
+              path: tenants/hou-edge/gsisa/namespaces/overlays/default
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
               name: tenant-projects-thomasphall
               namespace: openshift-gitops
               path: tenants/hou-edge/thomasphall/charts/tenant-projects
