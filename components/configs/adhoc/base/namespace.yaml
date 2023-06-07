@@ -5,5 +5,5 @@ metadata:
   annotations:
     openshift.io/description: |
       Make it difficult to avoid bad behavior,
-      but make it possible when needed.
+      but make it possible
     openshift.io/display-name: Adhoc Automation
