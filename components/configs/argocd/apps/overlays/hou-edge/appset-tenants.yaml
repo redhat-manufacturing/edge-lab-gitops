@@ -57,7 +57,7 @@ spec:
             values:
               name: tenant-projects-troyer
               namespace: openshift-gitops
-              path: tenants/hou-edge/troyer/charts/tenant-projects
+              path: tenants/hou-edge/troyer/test
   template:
     metadata:
       name: '{{values.name}}'
