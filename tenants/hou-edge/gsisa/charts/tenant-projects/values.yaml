@@ -1,0 +1,13 @@
+gitops-tenant:
+  fullnameOverride: shankar-sundar
+
+  adminGroup:
+    members:
+      - shankar-sundar
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: admin
+      annotations:
+        openshift.io/display-name: GSI Solution Architecture Team Namespace
