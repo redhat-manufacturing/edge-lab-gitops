@@ -51,7 +51,7 @@ spec:
             values:
               name: tenant-projects-gsisa
               namespace: openshift-gitops
-              path: tenants/hou-edge/gsisa/namespaces/overlays/default
+              path: tenants/hou-edge/gsisa/overlays/default
           - cluster: local
             url: https://kubernetes.default.svc
             values:
