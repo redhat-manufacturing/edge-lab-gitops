@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gsisa
+  annotations:
+    openshift.io/description: |
+      GSI Solution Architecture Team
+    openshift.io/display-name: GSI-SA
