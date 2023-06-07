@@ -1,0 +1,14 @@
+gitops-tenant:
+  fullnameOverride: troyer
+
+  adminGroup:
+    members:
+      - strangiato
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: admin
+      labels:
+        modelmesh-enabled: 'true'
+        opendatahub.io/dashboard: 'true'
