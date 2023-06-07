@@ -4,6 +4,6 @@ metadata:
   name: adhoc-ops
   annotations:
     openshift.io/description: |
-      Let automation do something for you -
-      Even if it's only halfway
+      Make it difficult to avoid bad behavior,
+      but make it possible when needed.
     openshift.io/display-name: Adhoc Automation
