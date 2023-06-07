@@ -14,6 +14,8 @@ spec:
       app.kubernetes.io/name: sleeper-admin
   template:
     metadata:
+      annotations:
+        hint: 'TOKEN=$(oc -n adhoc-ops exec sleeper-admin-0 -- oc whoami -t)'
       labels:
         app.kubernetes.io/name: sleeper-admin
     spec:
