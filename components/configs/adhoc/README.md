@@ -8,6 +8,8 @@ your attention to obtain non-kludged status.
 Lets remove kubeadmin...
 
 ```
-oc -n ocp-adhoc \
-  rsh deploy/sleeper-admin
+TOKEN=$(oc -n adhoc-ops \
+  exec deploy/sleeper-admin-0 -- oc whoami -t)
+
+oc login --token $TOKEN
 ```
