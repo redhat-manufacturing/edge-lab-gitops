@@ -3,5 +3,6 @@ apiVersion: user.openshift.io/v1
 metadata:
   name: gsisa-admins
 users:
-  - shankar-sundar
+  - bhandaru
   - ktatro-rh
+  - shankar-sundar
