@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../base
+  - notebook-controller-culler-config.yaml
 
 patchesStrategicMerge:
   - rhods-admins.yaml
