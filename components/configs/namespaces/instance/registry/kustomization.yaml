@@ -10,3 +10,4 @@ resources:
   - puller-sa.yaml
   - pusher-rolebinding.yaml
   - pusher-sa.yaml
+  - rolebinding-edit.yaml
