@@ -3,7 +3,7 @@ kind: ArgoCD
 metadata:
   name: openshift-gitops
 spec:
-  server:
+  repo:
     resources:
-      requests:
+      limits:
         memory: 2Gi

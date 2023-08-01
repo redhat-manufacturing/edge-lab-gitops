@@ -5,15 +5,17 @@ namespace: openshift-gitops
 
 resources:
   - ../../base
+  - gitops-admin-group.yaml
+
 
 components:
   - ../../components/annotation-resource-tracking
-  - ../../components/termination-reencrypt
+  - ../../components/application-controller-cluster-admin
   - ../../components/enable-notifications
-  - ../../components/gitops-admins
   - ../../components/health-check-odf
   - ../../components/health-check-olm
   - ../../components/health-check-openshift-builds
+  - ../../components/termination-reencrypt
 
 patches:
   - path: openshift-gitops-resources-patch.yaml
