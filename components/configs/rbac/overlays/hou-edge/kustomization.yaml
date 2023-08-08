@@ -5,6 +5,8 @@ bases:
   - ../../base
 
 resources:
+  - aap-admins-group.yaml
+  - aap-edit-ns-rolebinding.yaml
   - adhoc-ops-group.yaml
   - lab-cluster-admins-group.yaml
   - lab-cluster-admins-rolebinding.yaml

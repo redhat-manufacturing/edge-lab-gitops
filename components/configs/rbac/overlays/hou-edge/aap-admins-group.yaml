@@ -3,4 +3,8 @@ apiVersion: user.openshift.io/v1
 metadata:
   name: aap-admins
 users:
+<<<<<<< HEAD
 - cnorville90
+=======
+- cnorville90
+>>>>>>> 560faf0c964f69e33e0facea9eabfcc34a7f7b5f
