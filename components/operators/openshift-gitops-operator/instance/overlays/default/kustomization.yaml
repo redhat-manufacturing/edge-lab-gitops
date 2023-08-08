@@ -3,13 +3,13 @@ kind: Kustomization
 
 namespace: openshift-gitops
 
-bases:
+resources:
   - ../../base
 
-resources:
-  - gitops-admin-group.yaml
-
-patches:
-  - path: patch-resource-customizations.yaml
-    target:
-      kind: ArgoCD
+components:
+  - ../../components/annotation-resource-tracking
+  - ../../components/enable-notifications
+  - ../../components/gitops-admins
+  - ../../components/health-check-olm
+  - ../../components/health-check-openshift-builds
+  - ../../components/termination-edge

@@ -3,26 +3,20 @@ kind: Kustomization
 
 namespace: openshift-gitops
 
-bases:
-  - ../default
-
-patchesStrategicMerge:
+resources:
+  - ../../base
   - gitops-admin-group.yaml
 
+
+components:
+  - ../../components/annotation-resource-tracking
+  - ../../components/application-controller-cluster-admin
+  - ../../components/enable-notifications
+  - ../../components/health-check-odf
+  - ../../components/health-check-olm
+  - ../../components/health-check-openshift-builds
+  - ../../components/termination-reencrypt
+
 patches:
-  - patch: |-
-      - op: replace
-        path: /spec/rbac/policy
-        value: |
-          g, gitops-admins, role:admin
-          g, lab-cluster-admins, role:admin
-          g, system:cluster-admins, role:admin
-          g, cluster-admins, role:admin
-      - op: add
-        path: /spec/server/route/tls/termination
-        value: reencrypt
-      - op: replace
-        path: /spec/repo/resources/limits/memory
-        value: 2Gi
-    target:
-      kind: ArgoCD
+  - path: openshift-gitops-resources-patch.yaml
+  - path: openshift-gitops-rbac-patch.yaml

@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: openshift-gitops
+spec:
+  repo:
+    resources:
+      limits:
+        memory: 2Gi
