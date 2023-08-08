@@ -9,8 +9,4 @@ roleRef:
 subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: Group
-<<<<<<< HEAD:components/configs/rbac/overlays/hou-edge/lab-user-edit-ns-rolebinding.yaml
   name: aap-admins
-=======
-  name: aap-admins
->>>>>>> 560faf0c964f69e33e0facea9eabfcc34a7f7b5f:components/configs/rbac/overlays/hou-edge/aap-edit-ns-rolebinding.yaml
