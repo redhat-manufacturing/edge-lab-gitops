@@ -7,6 +7,8 @@ resources:
   - ../../base
   - gitops-admin-group.yaml
 
+commonAnnotations:
+  argocd.argoproj.io/sync-options: Prune=false
 
 components:
   - ../../components/annotation-resource-tracking
