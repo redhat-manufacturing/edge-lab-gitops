@@ -7,3 +7,7 @@ spec:
     resources:
       limits:
         memory: 2Gi
+  controller:
+    resources:
+      limits:
+        memory: 4Gi
