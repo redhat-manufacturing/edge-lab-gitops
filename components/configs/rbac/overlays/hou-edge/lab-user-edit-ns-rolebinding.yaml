@@ -1,0 +1,13 @@
+kind: RoleBinding
+metadata:
+  creationTimestamp: null
+  name: edit
+  namespace: aap
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: edit
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: cnorville90
