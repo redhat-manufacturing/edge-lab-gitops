@@ -6,9 +6,9 @@
       values:
         name: config-aap-instance
         namespace: openshift-gitops
-        # without kustomize: oc apply -f
+        # without kustomize: oc apply -f <path>
         # path: components/configs/simple/aap-instance
-        # with kustomize: oc apply -k
+        # with kustomize: oc apply -k <path>
         path: components/operators/ansible-automation-platform-operator/instance/overlays/default
     - cluster: local
       url: https://kubernetes.default.svc
