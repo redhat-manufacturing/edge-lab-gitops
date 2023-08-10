@@ -5,4 +5,4 @@ kind: Kustomization
 resources:
   # - console-link.yaml
   - controller.yaml
-  - eda_controller.yaml
+  - eda-controller.yaml
