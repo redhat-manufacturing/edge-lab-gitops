@@ -1,0 +1,11 @@
+gitops-tenant:
+  fullnameOverride: cnorville90
+
+  adminGroup:
+    members:
+      - cnorville90
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: edit
