@@ -37,15 +37,21 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
-              name: tenant-projects-codekow
-              namespace: openshift-gitops
-              path: tenants/hou-edge/codekow/charts/tenant-projects
-          - cluster: local
-            url: https://kubernetes.default.svc
-            values:
               name: tenant-projects-chevron
               namespace: openshift-gitops
               path: tenants/hou-edge/chevron/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: tenant-projects-cnorville90
+              namespace: openshift-gitops
+              path: tenants/hou-edge/cnorville90/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: tenant-projects-codekow
+              namespace: openshift-gitops
+              path: tenants/hou-edge/codekow/charts/tenant-projects
           - cluster: local
             url: https://kubernetes.default.svc
             values:
