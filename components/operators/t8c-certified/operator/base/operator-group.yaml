@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: t8c-certified-group
+  namespace: t8c-certified
+spec:
+  targetNamespaces:
+    - t8c-certified
