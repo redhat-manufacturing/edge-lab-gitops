@@ -40,6 +40,7 @@ KieApp
 Koku
 KokuMetricsConfig
 Kubernetes
+Kubeturbo
 Kyverno
 LDAP
 Lifecycle
@@ -86,6 +87,7 @@ TODO
 TaskRun
 Tekton
 Thanos
+Turbonomic
 UI
 VolSync
 Workspaces
