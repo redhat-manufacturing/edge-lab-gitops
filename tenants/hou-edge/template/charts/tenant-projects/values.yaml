@@ -1,0 +1,15 @@
+gitops-tenant:
+  fullnameOverride: mynamehere
+
+  adminGroup:
+    members:
+      - user1
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: edit
+      # labels for data science project
+      # labels:
+      #   modelmesh-enabled: 'true'
+      #   opendatahub.io/dashboard: 'true'
