@@ -7,7 +7,7 @@ spec:
     customImageNames: false
     repository: icr.io/cpopen/turbonomic
     securityContext:
-      fsGroup: 1000670000
+      fsGroup: 1000810000
     storageClassName: turbo-sc
     tag: 8.9.6
   grafana:
