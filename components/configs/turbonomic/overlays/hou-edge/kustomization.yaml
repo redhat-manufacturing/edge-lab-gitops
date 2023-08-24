@@ -1,0 +1,33 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: turbo
+
+resources:
+  - ../default
+  # kludge: sc not required - recommended for persistent data retention
+  - turbo-sc.yaml
+  - turbo-cr.yaml
+
+patches:
+  - target:
+      kind: OperatorGroup
+    patch: |-
+      - op: replace
+        path: /spec/targetNamespaces
+        value:
+          - turbo
+  - target:
+      kind: Xl
+    patch: |-
+      - op: replace
+        path: /spec/global/securityContext/fsGroup
+        value: '1000810000'
+  - target:
+      kind: Namespace
+    patch: |-
+      - op: add
+        path: /metadata/annotations
+        value:
+          openshift.io/sa.scc.supplemental-groups: '1000810000/10000'
+          openshift.io/sa.scc.uid-range: '1000810000/10000'
