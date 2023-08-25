@@ -5,7 +5,9 @@ namespace: turbo
 
 resources:
   - ../default
-  # kludge: sc not required - recommended for persistent data retention
+  # kludge: helm chart upstream needs to be fixed
+  - patch-cr-job.yaml
+  # kludge: sc not required - recommended by turbonomic for persistent data retention
   - turbo-sc.yaml
   - turbo-cr.yaml
 
@@ -17,17 +19,21 @@ patches:
         path: /spec/targetNamespaces
         value:
           - turbo
-  - target:
-      kind: Xl
-    patch: |-
-      - op: replace
-        path: /spec/global/securityContext/fsGroup
-        value: '1000810000'
-  - target:
-      kind: Namespace
-    patch: |-
-      - op: add
-        path: /metadata/annotations
-        value:
-          openshift.io/sa.scc.supplemental-groups: '1000810000/10000'
-          openshift.io/sa.scc.uid-range: '1000810000/10000'
+  # - target:
+  #     kind: Xl
+  #   patch: |-
+  #     - op: replace
+  #       path: /spec/global/securityContext/fsGroup
+  #       value: 1000810000
+  # - target:
+  #     kind: Namespace
+  #   patch: |-
+  #     - op: add
+  #       path: /metadata/annotations/openshift.io~1sa.scc.mcs
+  #       value: 's0:c28:c27'
+  #     - op: add
+  #       path: /metadata/annotations/openshift.io~1sa.scc.supplemental-groups
+  #       value: '1000810000/10000'
+  #     - op: add
+  #       path: /metadata/annotations/openshift.io~1sa.scc.uid-range
+  #       value: '1000810000/10000'

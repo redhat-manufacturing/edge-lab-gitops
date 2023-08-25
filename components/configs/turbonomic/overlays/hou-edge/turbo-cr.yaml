@@ -6,8 +6,8 @@ spec:
   global:
     customImageNames: false
     repository: icr.io/cpopen/turbonomic
-    securityContext:
-      fsGroup: 5555555555
+    # securityContext:
+    #   fsGroup: 5555555555
   grafana:
     adminPassword: turbo123
     enabled: false
