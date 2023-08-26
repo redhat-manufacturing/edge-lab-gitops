@@ -3,5 +3,4 @@ apiVersion: user.openshift.io/v1
 metadata:
   name: template-admins
 users:
-  - anseifert
   - codekow
