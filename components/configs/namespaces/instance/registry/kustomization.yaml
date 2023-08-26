@@ -4,10 +4,9 @@ kind: Kustomization
 namespace: registry
 
 resources:
-  - edge-lab-ansible-is.yaml
   - namespace.yaml
-  - puller-rolebinding.yaml
-  - puller-sa.yaml
-  - pusher-rolebinding.yaml
-  - pusher-sa.yaml
   - rolebinding-edit.yaml
+  - rolebinding-puller.yaml
+  - rolebinding-pusher.yaml
+  - sa-puller.yaml
+  - sa-pusher.yaml
