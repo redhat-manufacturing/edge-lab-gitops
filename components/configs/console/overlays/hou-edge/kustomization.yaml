@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../base
-  - banner-warning.yaml
+  - banner-data.yaml
   - link-gitops.yaml
 
 patches:
