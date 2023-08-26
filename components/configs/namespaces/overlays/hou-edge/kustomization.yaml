@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ../default
+  - edge-lab-ansible-is.yaml
