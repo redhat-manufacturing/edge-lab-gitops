@@ -4,12 +4,11 @@ kind: Kustomization
 namespace: turbo
 
 resources:
-  - ../default
-  # kludge: helm chart upstream needs to be fixed
-  - patch-cr-job.yaml
+  - ../../base
+  - ../../../../operators/t8c-certified/operator/overlays/stable
   # kludge: sc not required - recommended by turbonomic for persistent data retention
   - turbo-sc.yaml
-  - turbo-cr.yaml
+
 
 patches:
   - target:
