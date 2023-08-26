@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: sandbox-cleanup
 spec:
-  schedule: "* * * * *"
+  schedule: "0 12 * * 6"
   successfulJobsHistoryLimit: 3  # Remove after successful completion
   failedJobsHistoryLimit: 1  # Retain failed so that we see it
   concurrencyPolicy: Forbid
