@@ -6,6 +6,7 @@ spec:
   global:
     customImageNames: false
     repository: icr.io/cpopen/turbonomic
+    tag: 8.9.7
     # securityContext:
     #   fsGroup: 5555555555
   grafana:
