@@ -6,6 +6,8 @@ namespace: turbo
 resources:
   - ../../base
   - ../../../../operators/t8c-certified/operator/overlays/stable
+  - group-admins.yaml
+  - rolebinding-edit.yaml
   # kludge: sc not required - recommended by turbonomic for persistent data retention
   - turbo-sc.yaml
 
