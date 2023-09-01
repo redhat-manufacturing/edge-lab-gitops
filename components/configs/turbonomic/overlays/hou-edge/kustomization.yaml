@@ -26,9 +26,9 @@ patches:
       - op: replace
         path: /spec/global/tag
         value: 8.9.7
-      - op: replace
-        path: /spec/global/storageClassName
-        value: turbo-sc
+      # - op: replace
+      #   path: /spec/global/storageClassName
+      #   value: turbo-sc
   # - target:
   #     kind: Xl
   #   patch: |-
