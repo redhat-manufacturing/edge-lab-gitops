@@ -31,11 +31,16 @@
       values:
         name: operator-elasticsearch
         path: components/operators/elasticsearch/operator/overlays/stable
+    # - cluster: local
+    #   url: https://kubernetes.default.svc
+    #   values:
+    #     name: operator-kubeturbo
+    #     path: components/operators/kubeturbo-certified/operator/overlays/stable
     - cluster: local
       url: https://kubernetes.default.svc
       values:
         name: operator-kubeturbo
-        path: components/operators/kubeturbo-certified/operator/overlays/stable
+        path: components/configs/kubeturbo/overlays/hou-edge
     - cluster: local
       url: https://kubernetes.default.svc
       values:
