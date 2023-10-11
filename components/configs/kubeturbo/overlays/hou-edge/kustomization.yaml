@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: kubeturbo-certified
 
 resources:
-  - ../../base
+  # - ../../base
   - ../../../../operators/kubeturbo-certified/operator/overlays/stable
   # - group-admins.yaml
   - rolebinding-edit.yaml
