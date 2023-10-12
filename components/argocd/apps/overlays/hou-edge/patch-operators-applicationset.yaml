@@ -89,10 +89,5 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
-        name: operator-turbonomics
-        path: components/configs/turbonomic
-    - cluster: local
-      url: https://kubernetes.default.svc
-      values:
         name: operator-web-terminal
         path: components/operators/web-terminal-operator/operator/overlays/fast
