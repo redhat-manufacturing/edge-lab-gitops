@@ -11,8 +11,8 @@ resources:
   - group-admins.yaml
   - namespace.yaml
   - rolebinding-edit.yaml
-  - turbo-cr-patch-job.yaml
-  - turbo-cr.yaml
+  - turbonomic-cr-patch-job.yaml
+  - turbonomic-cr.yaml
   # - kubeturbo.yaml
   # kludge: sc not required - recommended by turbonomic for persistent data retention
   # - turbo-sc.yaml

@@ -64,7 +64,7 @@ spec:
               oc whoami
               if oc get xl -n ${NAMESPACE}; then
                 echo FS_GROUP: ${FS_GROUP}
-                oc patch xl turbo --type=merge -p '{"spec": {"global": {"securityContext": {"fsGroup":'${FS_GROUP}'}}}}'
+                oc patch xl turbonomic --type=merge -p '{"spec": {"global": {"securityContext": {"fsGroup":'${FS_GROUP}'}}}}'
               else
                 echo "Wrong something went"
                 exit 1
