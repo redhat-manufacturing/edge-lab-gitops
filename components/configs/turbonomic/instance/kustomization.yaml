@@ -9,6 +9,7 @@ namespace: turbo
 
 resources:
   - group-admins.yaml
+  - namespace.yaml
   - rolebinding-edit.yaml
   - turbo-cr-patch-job.yaml
   - turbo-cr.yaml
