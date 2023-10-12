@@ -1,7 +1,7 @@
 apiVersion: charts.helm.k8s.io/v1
 kind: Xl
 metadata:
-  name: turbo
+  name: turbonomic
 spec:
   global:
     customImageNames: false
