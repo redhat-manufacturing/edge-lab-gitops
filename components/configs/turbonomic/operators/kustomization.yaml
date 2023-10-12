@@ -17,6 +17,13 @@ patches:
         path: /spec/targetNamespaces
         value:
           - turbo
+  - target:
+      kind: OperatorGroup
+      name: kubeturbo-certified-group
+    patch: |-
+      - op: replace
+        path: /metadata/namespace
+        value: turbo
   # kludge: due to operator group not working
   # kludge: operator uses env WATCH_NAMESPACE; can't change in csv
   - target:
