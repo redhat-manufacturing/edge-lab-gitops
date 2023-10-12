@@ -39,11 +39,6 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
-        name: operator-kubeturbo
-        path: components/configs/kubeturbo/overlays/hou-edge
-    - cluster: local
-      url: https://kubernetes.default.svc
-      values:
         name: operator-local-storage
         path: components/operators/local-storage/operator/overlays/stable
     - cluster: local

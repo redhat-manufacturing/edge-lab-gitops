@@ -1,34 +1,22 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+
 namespace: turbo
 
 resources:
-  - ../../base
-  - ../../../../operators/t8c-certified/operator/overlays/stable
-  - ../../../../operators/kubeturbo-certified/operator/overlays/stable
   - group-admins.yaml
   - rolebinding-edit.yaml
+  - turbo-cr-patch-job.yaml
+  - turbo-cr.yaml
+  # - kubeturbo.yaml
   # kludge: sc not required - recommended by turbonomic for persistent data retention
   # - turbo-sc.yaml
 
-
 patches:
-  - target:
-      kind: OperatorGroup
-    patch: |-
-      - op: replace
-        path: /spec/targetNamespaces
-        value:
-          - turbo
-  - target:
-      kind: OperatorGroup
-      name: kubeturbo-certified-group
-    patch: |-
-      - op: replace
-        path: /spec/targetNamespaces
-        value:
-          - turbo
   - target:
       kind: Xl
     patch: |-
@@ -38,6 +26,13 @@ patches:
       # - op: replace
       #   path: /spec/global/storageClassName
       #   value: turbo-sc
+  # - target:
+  #     kind: OperatorGroup
+  #   patch: |-
+  #     - op: replace
+  #       path: /spec/targetNamespaces
+  #       value:
+  #         - turbo
   # - target:
   #     kind: Xl
   #   patch: |-
