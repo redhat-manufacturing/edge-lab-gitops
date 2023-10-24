@@ -41,16 +41,16 @@
       values:
         name: operator-local-storage
         path: components/operators/local-storage/operator/overlays/stable
-    - cluster: local
-      url: https://kubernetes.default.svc
-      values:
-        name: operator-kubevirt
-        path: components/operators/kubevirt-hyperconverged/operator/overlays/stable
-#     - cluster: local
-#       url: https://kubernetes.default.svc
-#       values:
-#         name: operator-opendatahub
-#         path: components/operators/opendatahub/operator/overlays/stable
+    # - cluster: local
+    #   url: https://kubernetes.default.svc
+    #   values:
+    #     name: operator-openshift-virtualization
+    #     path: components/operators/kubevirt-hyperconverged/operator/overlays/stable
+    # - cluster: local
+    #   url: https://kubernetes.default.svc
+    #   values:
+    #     name: operator-opendatahub
+    #     path: components/operators/opendatahub/operator/overlays/stable
     - cluster: local
       url: https://kubernetes.default.svc
       values:
