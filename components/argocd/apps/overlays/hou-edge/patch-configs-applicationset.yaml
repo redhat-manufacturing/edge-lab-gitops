@@ -61,6 +61,6 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
-        name: config-sandbox-cleanup
+        name: config-openshift-virtualization
         namespace: openshift-gitops
         path: components/operators/kubevirt-hyperconverged/instance/overlays/default
