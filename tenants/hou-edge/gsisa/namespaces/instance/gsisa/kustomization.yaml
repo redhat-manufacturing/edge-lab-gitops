@@ -7,4 +7,4 @@ resources:
   - limit-range.yaml
   - namespace.yaml
   - quota.yaml
-  - rolebinding-admin.yaml
+
