@@ -12,6 +12,8 @@ resources:
   - lab-cluster-admins-rolebinding.yaml
   - lab-cluster-readers-group.yaml
   - lab-cluster-readers-rolebinding.yaml
+  - lab-cluster-virt-editors.yaml
+  - lab-cluster-virt-editors-rolebinding.yaml
 
 patchesJson6902:
   - target:
