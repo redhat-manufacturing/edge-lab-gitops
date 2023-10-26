@@ -15,7 +15,7 @@ patches:
         value: letsencrypt-staging
       - op: replace
         path: /spec/renewBefore
-        value: 125h0m0s
+        value: 360h0m0s
     target:
       kind: Certificate
       name: openshift-api
@@ -25,7 +25,7 @@ patches:
         value: letsencrypt-staging
       - op: replace
         path: /spec/renewBefore
-        value: 125h0m0s
+        value: 360h0m0s
     target:
       kind: Certificate
       name: openshift-wildcard
