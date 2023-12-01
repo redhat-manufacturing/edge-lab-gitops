@@ -86,11 +86,11 @@
     #   values:
     #     name: operator-rhods
     #     path: components/operators/rhods-operator/aggregate/overlays/edge-lab
-    - cluster: local
-      url: https://kubernetes.default.svc
-      values:
-        name: operator-turbonomic
-        path: components/configs/turbonomic/operators
+    # - cluster: local
+    #   url: https://kubernetes.default.svc
+    #   values:
+    #     name: operator-turbonomic
+    #     path: components/configs/turbonomic/operators
     - cluster: local
       url: https://kubernetes.default.svc
       values:
