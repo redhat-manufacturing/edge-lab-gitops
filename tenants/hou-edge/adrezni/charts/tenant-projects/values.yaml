@@ -9,4 +9,4 @@ gitops-tenant:
   namespaces:
     - nameSuffix: ""
       role: dev
-      adminGroupRole: admin
+      adminGroupRole: edit

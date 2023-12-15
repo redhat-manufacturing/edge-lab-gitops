@@ -8,7 +8,7 @@ gitops-tenant:
   namespaces:
     - nameSuffix: ""
       role: dev
-      adminGroupRole: admin
+      adminGroupRole: edit
       labels:
         modelmesh-enabled: 'true'
         opendatahub.io/dashboard: 'true'
