@@ -1,0 +1,14 @@
+gitops-tenant:
+  fullnameOverride: ai-sensor
+
+  adminGroup:
+    members:
+      - codekow
+      - scalarr
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: admin
+      annotations:
+        openshift.io/display-name: Make Chaos Great Again
