@@ -11,4 +11,4 @@ gitops-tenant:
       role: dev
       adminGroupRole: admin
       annotations:
-        openshift.io/display-name: Make Chaos Great Again
+        openshift.io/display-name: All the Sensors
