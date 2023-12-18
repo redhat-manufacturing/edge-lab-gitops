@@ -19,6 +19,12 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
+              name: tenant-projects-ai-sensor
+              namespace: openshift-gitops
+              path: tenants/hou-edge/ai-sensor/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
               name: tenant-projects-jarcher
               namespace: openshift-gitops
               path: tenants/hou-edge/jarcher/charts/tenant-projects
