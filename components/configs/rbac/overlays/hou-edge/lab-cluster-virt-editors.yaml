@@ -3,5 +3,6 @@ apiVersion: user.openshift.io/v1
 metadata:
   name: lab-cluster-virt-editors
 users:
-  - codekow
   - anseifert
+  - codekow
+  - mrhillsman
