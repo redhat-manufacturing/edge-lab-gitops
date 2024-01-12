@@ -31,7 +31,7 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
-              name: tenant-projects-jarcher
+              name: tenant-projects-smarthub
               namespace: openshift-gitops
               path: tenants/hou-edge/smarthub/charts/tenant-projects
           - cluster: local
