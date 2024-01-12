@@ -1,0 +1,13 @@
+gitops-tenant:
+  fullnameOverride: smarthub
+
+  adminGroup:
+    members:
+      - manojsonu7
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: edit
+      annotations:
+        openshift.io/display-name: SmartHub App
