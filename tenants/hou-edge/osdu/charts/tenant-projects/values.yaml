@@ -1,0 +1,13 @@
+gitops-tenant:
+  fullnameOverride: osdu
+
+  adminGroup:
+    members:
+      - codekow
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: edit
+      annotations:
+        openshift.io/display-name: OSDU
