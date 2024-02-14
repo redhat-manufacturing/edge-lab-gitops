@@ -3,6 +3,10 @@ gitops-tenant:
 
   adminGroup:
     members:
+      - akhila.nath
+      - anujgupta
+      - ashwani_pandey
+      - kaliprasanna-basu1
       - codekow
 
   namespaces:
