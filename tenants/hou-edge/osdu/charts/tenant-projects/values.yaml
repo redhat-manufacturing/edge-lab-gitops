@@ -1,0 +1,17 @@
+gitops-tenant:
+  fullnameOverride: osdu
+
+  adminGroup:
+    members:
+      - akhila.nath
+      - anujgupta
+      - ashwani_pandey
+      - kaliprasanna-basu1
+      - codekow
+
+  namespaces:
+    - nameSuffix: ""
+      role: dev
+      adminGroupRole: edit
+      annotations:
+        openshift.io/display-name: OSDU

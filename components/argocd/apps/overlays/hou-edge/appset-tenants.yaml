@@ -25,18 +25,6 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
-              name: tenant-projects-jarcher
-              namespace: openshift-gitops
-              path: tenants/hou-edge/jarcher/charts/tenant-projects
-          - cluster: local
-            url: https://kubernetes.default.svc
-            values:
-              name: tenant-projects-smarthub
-              namespace: openshift-gitops
-              path: tenants/hou-edge/smarthub/charts/tenant-projects
-          - cluster: local
-            url: https://kubernetes.default.svc
-            values:
               name: tenant-projects-backstage
               namespace: openshift-gitops
               path: tenants/hou-edge/backstage/charts/tenant-projects
@@ -70,6 +58,24 @@ spec:
               name: tenant-projects-gsisa
               namespace: openshift-gitops
               path: tenants/hou-edge/gsisa/overlays/default
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: tenant-projects-jarcher
+              namespace: openshift-gitops
+              path: tenants/hou-edge/jarcher/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: tenant-projects-osdu
+              namespace: openshift-gitops
+              path: tenants/hou-edge/osdu/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: tenant-projects-smarthub
+              namespace: openshift-gitops
+              path: tenants/hou-edge/smarthub/charts/tenant-projects
           - cluster: local
             url: https://kubernetes.default.svc
             values:
