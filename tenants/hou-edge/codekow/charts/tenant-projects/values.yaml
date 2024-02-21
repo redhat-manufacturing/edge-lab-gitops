@@ -10,8 +10,6 @@ gitops-tenant:
       role: dev
       adminGroupRole: edit
       labels:
-        pod-security.kubernetes.io/audit: privileged
-        pod-security.kubernetes.io/enforce: privileged
-        pod-security.kubernetes.io/warn: privileged
+        # pod-security.kubernetes.io/enforce: privileged
       annotations:
         openshift.io/display-name: Make Chaos Great Again
