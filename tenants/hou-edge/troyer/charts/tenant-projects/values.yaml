@@ -11,5 +11,5 @@ gitops-tenant:
       role: dev
       adminGroupRole: edit
       labels:
-        modelmesh-enabled: 'true'
-        opendatahub.io/dashboard: 'true'
+        # modelmesh-enabled: 'true'
+        # opendatahub.io/dashboard: 'true'
