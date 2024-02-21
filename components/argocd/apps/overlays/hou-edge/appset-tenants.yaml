@@ -61,6 +61,12 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
+              name: tenant-projects-ibm-common-services
+              namespace: openshift-gitops
+              path: tenants/hou-edge/ibm-common-services/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
               name: tenant-projects-jarcher
               namespace: openshift-gitops
               path: tenants/hou-edge/jarcher/charts/tenant-projects
@@ -70,6 +76,12 @@ spec:
               name: tenant-projects-osdu
               namespace: openshift-gitops
               path: tenants/hou-edge/osdu/charts/tenant-projects
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: tenant-projects-osdu-service-mesh
+              namespace: openshift-gitops
+              path: tenants/hou-edge/osdu-service-mesh/charts/tenant-projects
           - cluster: local
             url: https://kubernetes.default.svc
             values:
