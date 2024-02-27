@@ -12,6 +12,6 @@ gitops-tenant:
   namespaces:
     - nameSuffix: ""
       role: dev
-      adminGroupRole: edit
+      adminGroupRole: admin
       annotations:
         openshift.io/display-name: IBM Common Services
