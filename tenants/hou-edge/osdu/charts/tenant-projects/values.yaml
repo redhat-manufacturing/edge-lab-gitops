@@ -8,6 +8,9 @@ gitops-tenant:
       - ashwani_pandey
       - kaliprasanna-basu1
       - codekow
+      - boya_jayanth
+      - vikasrana
+      - mayuridesale
 
   namespaces:
     - nameSuffix: ""
